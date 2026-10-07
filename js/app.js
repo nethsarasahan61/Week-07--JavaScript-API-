@@ -72,15 +72,58 @@
 // console.log(numbers);
 // console.log(numbers.map(numbers=>numbers*2));
 
-const StudentList = [
-    {name: "Saman", age: 20, gender: "male"},
-    {name: "Nimal", age: 21, gender: "male"},
-    {name: "Kamal", age: 22, gender: "male"},
-    {name: "Sunil", age: 23, gender: "male"},
-    {name: "Kumara", age: 24, gender: "male"}
-]
-console.log(StudentList.find(Student=> Student.name == "Kumara"));
+// const StudentList = [
+//     {name: "Saman", age: 20, gender: "male"},
+//     {name: "Nimal", age: 21, gender: "male"},
+//     {name: "Kamal", age: 22, gender: "male"},
+//     {name: "Sunil", age: 23, gender: "male"},
+//     {name: "Kumara", age: 24, gender: "male"}
+// ]
+// console.log(StudentList.find(Student=> Student.name == "Kumara"));
 
-fetch("/customer.json").then(res => res.json()).then(data =>{
-    console.log(data);    
-});
+// fetch("/customer.json").then(res => res.json()).then(data =>{
+//     console.log(data);    
+// });
+fetch("https://fakestoreapi.com/products").then(res => res.json()).then(data =>{
+        let tbl = document.getElementById("cards");
+        let body="";
+        data.forEach(data => {
+        body += `
+        <div class="col">
+                <div class="card shadow-sm">
+                    <center><img src="${data.image}" alt="" style="width:200px; height:200px; "></center>
+                    <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="0" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect>
+                    </svg>
+                    <div class="card-body">
+                    <p class="card-text"><b>
+                    ${data.title}</b>                
+                    </p>        
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Order Now</button>
+                        </div>                        
+                    </div>
+                    </div>
+                    </div>
+                </div>      
+        `;
+        })
+        tbl.innerHTML=body;                        
+})
+// function  btnLoadTableOnAction(){
+//     fetch("/customer.json").then(res => res.json()).then(data =>{
+//         let tbl = document.getElementById("tblCustomer");
+//         data.forEach(data => {
+//             tbl.innerHTML += `    
+//             <tr>
+//                 <td>${data.name}</td>
+//                 <td>${data.address}</td>
+//                 <td>${data.age}</td>
+//                 <td>${data.email}</td>
+//             </tr>
+//             `;
+//         });            
+//     });
+// }
