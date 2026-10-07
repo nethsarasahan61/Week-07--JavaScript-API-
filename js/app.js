@@ -68,8 +68,19 @@
 // }
 
 //Array sort
-const numbers=[1,2,3,4,5,6,7,8,9,10]
-console.log(numbers);
-console.log(numbers.map(numbers=>numbers*2));
+// const numbers=[1,2,3,4,5,6,7,8,9,10]
+// console.log(numbers);
+// console.log(numbers.map(numbers=>numbers*2));
 
+const StudentList = [
+    {name: "Saman", age: 20, gender: "male"},
+    {name: "Nimal", age: 21, gender: "male"},
+    {name: "Kamal", age: 22, gender: "male"},
+    {name: "Sunil", age: 23, gender: "male"},
+    {name: "Kumara", age: 24, gender: "male"}
+]
+console.log(StudentList.find(Student=> Student.name == "Kumara"));
 
+fetch("/customer.json").then(res => res.json()).then(data =>{
+    console.log(data);    
+});

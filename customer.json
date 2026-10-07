@@ -1,0 +1,26 @@
+[
+    {
+        "name":"Saman",
+        "age":20,
+        "address":"Moratuwa",
+        "email":"saman123@example.com"
+    },
+    {
+        "name":"Kamal",
+        "age":21,
+        "address":"Katubadde",
+        "email":"kamal123@example.com"
+    },
+    {
+        "name":"Nimal",
+        "age":22,
+        "address":"Colombo",
+        "email":"nimal123@example.com"
+    },
+    {
+        "name":"Sunil",
+        "age":23,
+        "address":"Galle",
+        "email":"sunil123@example.com"
+    }
+]
