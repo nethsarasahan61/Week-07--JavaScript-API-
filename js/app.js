@@ -42,9 +42,5 @@ const productList=[
 ]
 console.log(productList);
 
-let inStockProducts = productList.filter(
-    function(product){
-        return product.inStock == true;
-    }
-)
+let inStockProducts = productList.filter( product => product.inStock == true )
 console.log(inStockProducts);
