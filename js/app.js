@@ -44,3 +44,26 @@ console.log(productList);
 
 let inStockProducts = productList.filter( product => product.inStock == true )
 console.log(inStockProducts);
+
+//Normal functions
+function addNumber(num1,num2){
+    return num1+num2;
+}
+console.log(addNumber(10,5));
+
+//Variable assigned function
+let getSum = function(num1,num2){
+    return num1+num2
+};
+console.log(getSum(10,5));
+
+//variable assigned arrow functions
+let getTotal = (num1,num2) => num1+num2;
+console.log(getTotal(10,5));
+
+//annonyms functions
+(num1,num2)=>num1+num2;
+(num1,num2) =>{
+    return num1+num2;
+}
+
