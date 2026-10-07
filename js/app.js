@@ -33,37 +33,43 @@
 // StudentList.push(Student)
 // console.log(StudentList);
 
-const productList=[
-    {name: "bun", inStock: true, price: 100},
-    {name: "milk", inStock: false, price: 120},
-    {name: "egg", inStock: true, price: 140},
-    {name: "bread", inStock: false, price: 160},
-    {name: "butter", inStock: true, price: 180}
-]
-console.log(productList);
+// const productList=[
+//     {name: "bun", inStock: true, price: 100},
+//     {name: "milk", inStock: false, price: 120},
+//     {name: "egg", inStock: true, price: 140},
+//     {name: "bread", inStock: false, price: 160},
+//     {name: "butter", inStock: true, price: 180}
+// ]
+// console.log(productList);
 
-let inStockProducts = productList.filter( product => product.inStock == true )
-console.log(inStockProducts);
+// let inStockProducts = productList.filter( product => product.inStock == true )
+// console.log(inStockProducts);
 
-//Normal functions
-function addNumber(num1,num2){
-    return num1+num2;
-}
-console.log(addNumber(10,5));
+// //Normal functions
+// function addNumber(num1,num2){
+//     return num1+num2;
+// }
+// console.log(addNumber(10,5));
 
-//Variable assigned function
-let getSum = function(num1,num2){
-    return num1+num2
-};
-console.log(getSum(10,5));
+// //Variable assigned function
+// let getSum = function(num1,num2){
+//     return num1+num2
+// };
+// console.log(getSum(10,5));
 
-//variable assigned arrow functions
-let getTotal = (num1,num2) => num1+num2;
-console.log(getTotal(10,5));
+// //variable assigned arrow functions
+// let getTotal = (num1,num2) => num1+num2;
+// console.log(getTotal(10,5));
 
-//annonyms functions
-(num1,num2)=>num1+num2;
-(num1,num2) =>{
-    return num1+num2;
-}
+// //annonyms functions
+// (num1,num2)=>num1+num2;
+// (num1,num2) =>{
+//     return num1+num2;
+// }
+
+//Array sort
+const numbers=[1,2,3,4,5,6,7,8,9,10]
+console.log(numbers);
+console.log(numbers.map(numbers=>numbers*2));
+
 
